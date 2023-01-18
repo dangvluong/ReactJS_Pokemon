@@ -45,13 +45,15 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <header className="pokemon-header">Pokemon</header>
-      <PokemonCollection pokemons={pokemons} viewDetail={viewDetail} setDetail={setDetail}></PokemonCollection>
-      {!viewDetail.isOpened && (
-        <div className="btn">
-          <button onClick={loadMore}>{loading ? "Loading..." : "Load more"}</button>
-        </div>
-      )}
+      <div className="container">
+        <header className="pokemon-header">Pokemon</header>
+        <PokemonCollection pokemons={pokemons} viewDetail={viewDetail} setDetail={setDetail}></PokemonCollection>
+        {!viewDetail.isOpened && (
+          <div className="btn">
+            <button onClick={loadMore}>{loading ? "Loading..." : "Load more"}</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
